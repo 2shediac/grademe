@@ -1,8 +1,14 @@
 language: php
 
-services:
-  - mysql
-  - docker
+sudo: false
+
+addons:
+  firefox: "47.0.1"
+  postgresql: "9.3"
+  apt:
+    packages:
+      - oracle-java8-installer
+      - oracle-java8-set-default
 
 cache:
   directories:
@@ -10,18 +16,20 @@ cache:
     - $HOME/.npm
 
 php:
- - 7.2
+ - 7.0
+ - 7.1
 
 env:
  global:
-  - MOODLE_BRANCH=MOODLE_39_STABLE
- matrix:
   - DB=mysqli
+ matrix:
+  - MOODLE_BRANCH=master
+  - MOODLE_BRANCH=MOODLE_39_STABLE
 
 before_install:
   - phpenv config-rm xdebug.ini
-  - nvm install 14.0
-  - nvm use 14.0
+  - nvm install 8.9
+  - nvm use 8.9
   - cd ../..
   - composer create-project -n --no-dev --prefer-dist moodlerooms/moodle-plugin-ci ci ^2
   - export PATH="$(cd ci/bin; pwd):$(cd ci/vendor/bin; pwd):$PATH"
@@ -38,11 +46,5 @@ script:
   - moodle-plugin-ci savepoints
   - moodle-plugin-ci mustache
   - moodle-plugin-ci grunt
-  - moodle-plugin-ci phpdoc
   - moodle-plugin-ci phpunit
   - moodle-plugin-ci behat
-  - if [ $BEHAT == 'yes' ]; then
-        moodle-plugin-ci behat || travis_terminate 1;
-    fi
-
-
