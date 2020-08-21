@@ -1,26 +1,13 @@
-# Grade Me block
-This block for Moodle 2.x/3.x shows a list of gradable items.
+# Contributing
+We welcome community contributions!
 
-## About this repository
-This repository is separated into branches for each supported version. For Moodle versions, branches are named like MOODLE_XX_STABLE. For Totara versions, branches are named like TOTARA_XX_STABLE. The “XX” corresponds to the version that branch is for. For example, MOODLE_27_STABLE would be for Moodle 2.7. These branches contain production-ready, stable code.
+## How to contribute
+All contributions can be made on Github via pull requests. Please review open issues in the Github issue tracker before submitting, and create a new issue if there is not a relevant existing issue. Please reference relevant issues in your pull request.
 
-## Documentation
-- [Installation](docs/install.md)
-- [Contributing](CONTRIBUTING.md)
-- [Moodle.org plugin page](https://moodle.org/plugins/block_grade_me)
-- [GitHub repository](https://github.com/remotelearner/moodle-block_grade_me)
-- [GitHub issue tracker](https://github.com/remotelearner/moodle-block_grade_me/issues)
+Pull requests should be made against the STABLE branch for which it is relevant. If your improvement/fix is relevant to multiple versions, submit a pull request against the latest STABLE branch, and note the other versions in the pull request comment.
 
-## Support
-If you are experiencing problems, have a feature request, or have a question, please open an issue on the Github issue tracker.
+## Code Review
+All contributions are reviewed by developers and must pass a thorough examination before they are merged. Please read our [code review](TBD - link to code review process) process and ensure your contribution adheres to our standards. A developer may have additional questions or require you make changes before a pull request can be accepted, and it is the responsibility of the submitter to make those changes. Not all submissions will be accepted. If accepted, your commit will remain as-is to ensure you get credit, but developers may modify solutions in subsequent commits.
 
-To help developers debug problems, please include the following in all issues:
-- Plugin versions.
-- Moodle version.
-- Detailed instructions of what went wrong and how to reproduce the problem.
-- Any error messages encountered.
-- PHP version.
-- Database software and versions.
-- Any other environmental information available.
-
-Developers will triage issues and deal with more serious problems first. We will try to address all issues but cannot guarantee when your issue will be addressed.
+## License
+All contributions will be subject to the [GPL](/LICENSE), as is required by the GPL.

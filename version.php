@@ -15,18 +15,17 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Grade Me block
+ * Version file for filter_personalization.
  *
- * @package   block_grade_me
- * @copyright 2012 Dakota Duff
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package filter_personalization
+ * @copyright 2017 James McQuillan <james.mcquillan@remote-learner.net>
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version = 2020061500;
 $plugin->requires = 2020061500;
-$plugin->cron = 3600;
-$plugin->component = 'block_grade_me';
+$plugin->component = 'filter_personalization';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '3.9.0.0';

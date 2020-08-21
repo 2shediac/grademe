@@ -15,24 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package    block_grade_me
- * @copyright  2017 Derek Henderson {@link http://www.remote-learner.net}
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Language strings for filter_personalization.
+ *
+ * @package filter_personalization
+ * @copyright 2017 James McQuillan <james.mcquillan@remote-learner.net>
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_grade_me\task;
 
-defined('MOODLE_INTERNAL') || die();
-
-
-class cache_grade_data extends \core\task\scheduled_task {
-
-    public function get_name() {
-        return get_string('pluginname', 'block_grade_me');
-    }
-
-    public function execute() {
-        global $CFG;
-        require_once($CFG->dirroot . '/blocks/grade_me/lib.php');
-        block_grade_me_cache_grade_data();
-    }
-}
+$string['filtername'] = 'Personalization filter';
+$string['nograde'] = 'No grade';
